@@ -7,5 +7,4 @@ def uppercase(str):
             u = chr(ord(c) - 32)
             print("{}".format(u) if i != l-1 else "{}\n".format(u), end="")
         else:
-            print("{}".format(c) if i != l-1 else "{}\n".format(u), end="")
-
+            print("{}".format(c) if i != l-1 else "{}\n".format(c), end="")
