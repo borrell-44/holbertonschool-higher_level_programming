@@ -6,7 +6,7 @@ def uppercase(str):
         if ord(c) >= 97 and ord(c) <= 122:
             con = True
         else:
-            con  = False
+            con = False
         u = chr(ord(c) - 32)
-        print("{}".format(u) if con == True else "{}".format(c), end="")
+        print("{}".format(u) if con is True else "{}".format(c), end="")
     print()
