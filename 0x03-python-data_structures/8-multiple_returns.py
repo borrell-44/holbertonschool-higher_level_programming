@@ -4,7 +4,7 @@ def multiple_returns(sentence):
     if not sentence:
         return tup
     lis = list(tup)
-    lis[1] = sentences[0]
+    lis[1] = sentence[0]
     lis[0] = len(sentence)
     tup = tuple(lis)
     return tup
