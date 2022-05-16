@@ -5,7 +5,7 @@ def safe_function(fct, *args):
 
     try:
         end = fct(args[0], args[1])
-    except (IndexError, ZeroDivisionError):
+    except (IndexError, ZeroDivisionError, ValueError, TypeError):
         print("Exception:", sys.exc_info()[1], file=sys.stderr)
         return None
 
