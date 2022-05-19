@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 
-###File Comments###
+""" File Comments """
 
 
 class Square:
 
-   ###Comments###
+   """ class Square """
 
     pass
