@@ -28,7 +28,9 @@ class Rectangle(object):
             return rec
 
     def __repr__(self):
-        rec = "Rectangle(" + str(self.__width) + ", " + str(self.__height) + ")"
+        w = str(self.__width)
+        h = str(self.__height)
+        rec = "Rectangle(" + w + ", " + h + ")"
         return rec
 
     def __del__(self):
@@ -66,4 +68,3 @@ class Rectangle(object):
         if self.__width == 0 or self.__height == 0:
             return 0
         return self.__height * 2 + self.__width * 2
-
