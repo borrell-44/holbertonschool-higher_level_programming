@@ -24,5 +24,11 @@ class TestMaxInteger(unittest.TestCase):
     def test_None(self):
         self.assertEqual(max_integer([-10, -7, -5, -1]), -1)
 
+    def test_oneObjetc(self):
+        self.assertEqual(max_integer([9]), 9)
+
+    def test_maxFirst(self):
+        self.assertEqual(max_integer([12, 10, 5, 8]), 12)
+
 if __name__ == '__main__':
     unittest.main()
