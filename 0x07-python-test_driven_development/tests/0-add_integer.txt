@@ -35,3 +35,13 @@ TypeError: add_integer() missing 1 required positional argument: 'a'
 >>> add_integer("unicorn")
 Traceback (most recent call last):
 TypeError: a must be an integer
+
+>>> add_integer(0.1E3089999999)
+Traceback (most recent call last):
+OverflowError: cannot convert float infinity to integer
+
+>>> import numpy as np
+>>> add_integer(np.nan)
+Traceback (most recent call last):
+ValueError: cannot convert float NaN to integer
+
