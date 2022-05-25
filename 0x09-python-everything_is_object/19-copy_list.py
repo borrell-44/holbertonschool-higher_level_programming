@@ -1,3 +1,3 @@
 #!/usr/bin/pytohn3
-def copy_list(sup):
-    return list(sup)
+def copy_list(l):
+    return list(l)
