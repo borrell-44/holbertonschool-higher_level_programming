@@ -21,3 +21,7 @@ TypeError: last_name must be a string
 
 >>> say_my_name("Hello")
 My name is Hello 
+
+>>> say_my_name(34, "Hello")
+Traceback (most recent call last):
+TypeError: first_name must be a string
