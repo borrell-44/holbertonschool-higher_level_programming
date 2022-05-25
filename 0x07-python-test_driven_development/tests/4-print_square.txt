@@ -1,0 +1,14 @@
+Getting function:
+*****************
+
+print_square = __import__('4-print_square').print_square
+
+
+
+Testing Cases:
+**************
+
+>>> print_square(2)
+##
+##
+
