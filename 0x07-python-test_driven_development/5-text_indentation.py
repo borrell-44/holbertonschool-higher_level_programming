@@ -1,6 +1,12 @@
 #!/usr/bin/python3
 
+""" File Comments """
+
+
 def text_indentation(text):
+
+    """ function Comments """
+
     if type(text) is not str:
         raise TypeError("text must be a string")
 
