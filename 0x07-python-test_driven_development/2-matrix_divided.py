@@ -8,6 +8,7 @@ def matrix_divided(matrix, div):
     """ function Comments """
 
     string1 = "matrix must be a matrix (list of list) of integers/floats"
+    string2 = "matrix must be a matrix (array of arrays of integers/floats)"
     if type(matrix) is not list:
         raise TypeError(string1)
 
@@ -30,7 +31,7 @@ def matrix_divided(matrix, div):
 
         for j in matrix[i]:
             if type(j) is not int and float:
-                raise TypeError(string1)
+                raise TypeError(string2)
             new[i].append(round(j/div, 2))
 
     return new
