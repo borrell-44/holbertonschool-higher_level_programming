@@ -37,3 +37,10 @@ Testing Cases:
 >>> my_list.print_sorted()
 ['H', 'e', 'l', 'l', 'o']
 
+>>> my_list = MyList()
+>>> my_list.append(1)
+>>> my_list.append(-12)
+>>> my_list.append(12)
+>>> my_list.print_sorted()
+[-12, 1, 12]
+
