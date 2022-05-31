@@ -9,5 +9,5 @@ def add_attribute(cls, field, value):
 
     try:
         setattr(cls, field, value)
-    except:
+    except Exception:
         raise TypeError("can't add new attribute")
