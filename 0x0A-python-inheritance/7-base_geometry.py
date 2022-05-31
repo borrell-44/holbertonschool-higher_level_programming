@@ -3,7 +3,7 @@
 """ file Comments """
 
 
-class BaseGeometry():
+class BaseGeometry(object):
 
     """ class Comments """
 
