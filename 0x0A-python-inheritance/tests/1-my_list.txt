@@ -16,3 +16,6 @@ Testing Cases:
 >>> my_list.print_sorted()
 [1, 2, 4]
 
+>>> my_list = MyList()
+>>> my_list.print_sorted()
+[]
