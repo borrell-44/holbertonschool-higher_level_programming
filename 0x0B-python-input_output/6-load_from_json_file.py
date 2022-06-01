@@ -1,7 +1,8 @@
 #!/usr/bin/python3
-import json
 
-""" file Comments """
+"""" file Comments """
+
+import json
 
 
 def load_from_json_file(filename):
