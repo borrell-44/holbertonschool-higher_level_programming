@@ -1,9 +1,8 @@
 #!/usr/bin/python3
 
+""" file Comments """
 
 import json
-
-""" file Comments """
 
 
 def to_json_string(my_obj):
