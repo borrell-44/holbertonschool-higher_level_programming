@@ -7,7 +7,7 @@ def add_attribute(cls, field, value):
 
     """ function Commnets """
 
-    try:
+    if hasattr(cls, '__class__'):
         setattr(cls, field, value)
-    except Exception:
+    else:
         raise TypeError("can't add new attribute")
