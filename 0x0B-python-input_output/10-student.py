@@ -14,7 +14,7 @@ class Student(object):
 
     def to_json(self, attrs=None):
         hold = self.__dict__
-        if attrs != None:
+        if attrs is not None:
             dic = {k: hold[k] for k in hold.keys() & attrs}
             return dic
         return hold
