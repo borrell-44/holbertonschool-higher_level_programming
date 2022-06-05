@@ -88,3 +88,11 @@ class Rectangle(Base):
         if kwargs:
             for key, value in kwargs.items():
                 setattr(self, key, value)
+
+    def to_dictionary(self):
+        keys = ["id", "width", "height", "x", "y"]
+        values = [self.id, self.width, self.height, self.x, self.y]
+        dic = {}
+        for i in range(len(keys)):
+            dic.update({keys[i] : values[i]})
+        return dic
