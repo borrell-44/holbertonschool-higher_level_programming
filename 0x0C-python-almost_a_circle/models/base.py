@@ -92,7 +92,3 @@ class Base(object):
         for i in dic:
             ls.append(cls.create(**i))
         return ls
-
-    @staticmethod
-    def draw(list_rectangles, list_squares):
-        """ draw static method """
