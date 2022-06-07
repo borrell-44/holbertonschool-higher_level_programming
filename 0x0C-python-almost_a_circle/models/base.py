@@ -13,6 +13,7 @@ class Base(object):
     __nb_objects = 0
 
     def __init__(self, id=None):
+        """ init constructure """
         if id is not None:
             self.id = id
         else:
@@ -21,12 +22,14 @@ class Base(object):
 
     @staticmethod
     def to_json_string(list_dictionaries):
+        """ json_string static method """
         if list_dictionaries is None:
             return "[]"
         return json.dumps(list_dictionaries)
 
     @classmethod
     def save_to_file(cls, list_objs):
+        """ save_to_file class method """
         name = str(cls.__name__) + ".json"
         ls = []
         if list_objs is not None:
@@ -38,18 +41,21 @@ class Base(object):
 
     @staticmethod
     def from_json_string(json_string):
+        """ from_json_string static method """
         if not json_string or json_string is None:
             return []
         return json.loads(json_string)
 
     @classmethod
     def create(cls, **dictionary):
+        """ create class method """
         dum = cls(1, 1)
         dum.update(**dictionary)
         return dum
 
     @classmethod
     def load_from_file(cls):
+        """ load_from_file class method """
         name = str(cls.__name__) + ".json"
         ls = []
         if not os.path.isfile(name):
@@ -63,6 +69,7 @@ class Base(object):
 
     @classmethod
     def save_to_file_csv(cls, list_objs):
+        """ save_to_file_csv class method """
         name = str(cls.__name__) + ".csv"
         ls = []
         if list_objs is not None:
@@ -74,6 +81,7 @@ class Base(object):
 
     @classmethod
     def load_from_file_csv(cls):
+        """ load_from_file_csv class method """
         name = str(cls.__name__) + ".csv"
         ls = []
         if not os.path.isfile(name):
@@ -84,3 +92,7 @@ class Base(object):
         for i in dic:
             ls.append(cls.create(**i))
         return ls
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        """ draw static method """
