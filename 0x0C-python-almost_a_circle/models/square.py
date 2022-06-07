@@ -42,5 +42,5 @@ class Square(Rectangle):
         values = [self.id, self.size, self.x, self.y]
         dic = {}
         for i in range(len(keys)):
-            dic.update({keys[i] : values[i]})
+            dic.update({keys[i]: values[i]})
         return dic

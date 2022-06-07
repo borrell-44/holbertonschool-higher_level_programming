@@ -94,5 +94,5 @@ class Rectangle(Base):
         values = [self.id, self.width, self.height, self.x, self.y]
         dic = {}
         for i in range(len(keys)):
-            dic.update({keys[i] : values[i]})
+            dic.update({keys[i]: values[i]})
         return dic

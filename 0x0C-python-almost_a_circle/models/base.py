@@ -7,7 +7,7 @@ import os
 
 
 class Base(object):
-    
+
     """ class Comments """
 
     __nb_objects = 0
