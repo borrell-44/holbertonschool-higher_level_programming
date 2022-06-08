@@ -9,13 +9,9 @@ class TestBase(unittest.TestCase):
 
     """ class Comments """
 
-    def test_automatic_id(self):
+    def test_auto_id(self):
         b1 = Base()
         self.assertEqual(b1.id, 1)
-
-    def test_automatic_id_addition(self):
-        b2 = Base()
-        self.assertEqual(b2.id, 2)
 
 
 if __name__ == '__main__':
