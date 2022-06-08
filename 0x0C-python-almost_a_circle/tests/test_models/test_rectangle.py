@@ -24,7 +24,7 @@ class TestRectangle(unittest.TestCase):
         with self.assertRaises(TypeError) as cm:
             self.assertEqual(Rectangle(1, 2, "3"), cm)
         with self.assertRaises(TypeError) as cm:
-            self.assertEqual(Rectangle(1, 2, 3, "4"))
+            self.assertEqual(Rectangle(1, 2, 3, "4"), cm)
         r1 = Rectangle(1, 2, 3, 4, 5)
         self.assertEqual(r1.id, 5)
         with self.assertRaises(ValueError) as cm:
