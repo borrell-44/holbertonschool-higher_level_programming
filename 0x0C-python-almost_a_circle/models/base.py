@@ -51,7 +51,7 @@ class Base(object):
         """ create class method """
         if cls.__name__ == "Square":
             dum = cls(size=1)
-        else :
+        else:
             dum = cls(1, 1)
         dum.update(**dictionary)
         return dum
