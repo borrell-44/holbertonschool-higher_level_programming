@@ -40,6 +40,18 @@ class TestRectangle(unittest.TestCase):
         with self.assertRaises(ValueError) as cm:
             self.assertEqual(Rectangle(1, 2, 3, -4), cm)
 
+    def test_area(self):
+        r1 = Rectangle(1, 2, 3, 4)
+        self.assertEqual(r1.area(), 2)
+
+    def test_str(self):
+        r1 = Rectangle(1, 2, 3, 4)
+        self.assertEqual(r1.__str__(), '[Rectangle] (20) 3/4 - 1/2')
+
+    def test_display(self):
+        r1 = Rectangle(1, 1, 1, 1)
+        self.assertEqual(r1.display(), None)
+
 
 
 if __name__ == '__main__':
