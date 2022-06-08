@@ -49,7 +49,10 @@ class Base(object):
     @classmethod
     def create(cls, **dictionary):
         """ create class method """
-        dum = cls(1, 1)
+        if cls.__name__ == "Square":
+            dum = cls(size=1)
+        else :
+            dum = cls(1, 1)
         dum.update(**dictionary)
         return dum
 
