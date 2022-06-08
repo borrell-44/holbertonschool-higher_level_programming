@@ -17,6 +17,11 @@ class TestBase(unittest.TestCase):
         b3 = Base(89)
         self.assertEqual(b3.id, 89)
 
+    def test_json_string(self):
+        b1 = Base()
+        self.assertEqual(b1.to_json_string(None), '[]')
+        self.assertEqual(b1.to_json_string([]), '[]')
+        self.assertEqual(b1.to_json_string([{'id': 12}]), '[{"id": 12}]')
 
 if __name__ == '__main__':
     unittest.main()
