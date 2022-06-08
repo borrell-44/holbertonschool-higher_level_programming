@@ -19,6 +19,8 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(r1.y, 4)
         with self.assertRaises(TypeError) as cm:
             self.assertEqual(Rectangle("1", 2), cm)
+        with self.assertRaises(TypeError) as cm:
+            self.assertEqual(Rectangle(1, "2"), cm)
 
 
 if __name__ == '__main__':
