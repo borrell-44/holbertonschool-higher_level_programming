@@ -21,6 +21,25 @@ class TestRectangle(unittest.TestCase):
             self.assertEqual(Rectangle("1", 2), cm)
         with self.assertRaises(TypeError) as cm:
             self.assertEqual(Rectangle(1, "2"), cm)
+        with self.assertRaises(TypeError) as cm:
+            self.assertEqual(Rectangle(1, 2, "3"), cm)
+        with self.assertRaises(TypeError) as cm:
+            self.assertEqual(Rectangle(1, 2, 3, "4"))
+        r1 = Rectangle(1, 2, 3, 4, 5)
+        self.assertEqual(r1.id, 5)
+        with self.assertRaises(ValueError) as cm:
+            self.assertEqual(Rectangle(-1, 2), cm)
+        with self.assertRaises(ValueError) as cm:
+            self.assertEqual(Rectangle(1, -2), cm)
+        with self.assertRaises(ValueError) as cm:
+            self.assertEqual(Rectangle(0, 2), cm)
+        with self.assertRaises(ValueError) as cm:
+            self.assertEqual(Rectangle(1, 0), cm)
+        with self.assertRaises(ValueError) as cm:
+            self.assertEqual(Rectangle(1, 2, -3), cm)
+        with self.assertRaises(ValueError) as cm:
+            self.assertEqual(Rectangle(1, 2, 3, -4), cm)
+
 
 
 if __name__ == '__main__':
