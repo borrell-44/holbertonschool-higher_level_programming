@@ -1,2 +1,2 @@
 -- Comments
-SELECT * FROM *
+SHOW DATABASES;
