@@ -4,9 +4,9 @@ process.argv.forEach((val, index) => {
   num = index;
 });
 if (num === 1) {
-  console.log('No');
+  console.log('No argument');
 } else if (num === 2) {
-  console.log('One');
+  console.log('Argument found');
 } else {
-  console.log('Two');
+  console.log('Arguments found');
 }
