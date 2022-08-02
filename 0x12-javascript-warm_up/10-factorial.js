@@ -7,7 +7,7 @@ if (!isNaN(process.argv[2])) {
 }
 
 function fac (a) {
-  if (a === 1 || a === 0) {
+  if (a <= 1) {
     return 1;
   }
   let num = 1;
