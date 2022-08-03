@@ -5,7 +5,7 @@ function fac (num) {
     return 1;
   }
   return num * (fac(num - 1));
-};
+}
 
 if (process.argv.length <= 2) {
   console.log(1);
