@@ -20,8 +20,7 @@ if __name__ == "__main__":
         sys.stdout.write(rows[i][0])
         if i != len(rows) - 1:
             print(",", end=" ")
-        else:
-            print()
+    print()
 
     c.close()
     db.close()
