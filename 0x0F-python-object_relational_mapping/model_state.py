@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-"""Write a python file that contains the class definition of 
+"""Write a python file that contains the class definition of
 a State and an instance Base = declarative_base()"""
 
 import MySQLdb
@@ -14,6 +14,7 @@ class State(Base):
     "Links to the MySQL table states"
 
     __tablename__ = "states"
-    id = Column(Integer, Identity(start=1, cycle=True), nullable = False, primary_key = True)
-    name = Column(String(128), nullable = False)
-    db = MySQLdb.connect(db="hbtn_0e_4_usa" ,user="root", passwd="root", port=3306)
+    id = Column(Integer, autoincrement=True, nullable=False, primary_key=True)
+    name = Column(String(128), nullable=False)
+    db = MySQLdb.connect(db="hbtn_0e_4_usa", user="root", passwd="root",
+                         port=3306)
