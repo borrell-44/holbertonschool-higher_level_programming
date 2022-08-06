@@ -15,4 +15,3 @@ if __name__ == "__main__":
         print(row)
     c.close()
     db.close()
-    
