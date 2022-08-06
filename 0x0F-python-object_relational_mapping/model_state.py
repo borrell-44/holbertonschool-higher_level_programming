@@ -11,12 +11,7 @@ Base = declarative_base()
 
 
 class State(Base):
-   """State class inherits from Base
-    Links to MySQL table 'states'
-    Attributes:
-        id: column of auto-generated unique integer, can't be NULL, primary key
-        name: column of string with max 128 characters, can't be NULL
-    """
+    "Links to the MySQL table states"
 
     __tablename__ = "states"
     id = Column(Integer, unique=True, autoincrement=True,
