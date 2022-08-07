@@ -23,4 +23,4 @@ if __name__ == "__main__":
         if set[1] == argv[4]:
             print(set[0])
     if not sets:
-        print("Not Found")
+        print("Not found")
