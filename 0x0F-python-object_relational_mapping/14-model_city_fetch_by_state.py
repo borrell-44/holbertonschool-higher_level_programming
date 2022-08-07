@@ -15,8 +15,9 @@ if __name__ == "__main__":
     city = meta.tables["cities"]
 
     query = db.select([state.columns.name, city.columns.id,
-                      city.columns.name]).where(city.columns.state_id == 
-                      state.columns.id).order_by(city.columns.id.asc())
+                      city.columns.name]).where(
+                      city.columns.state_id == state.columns.id).order_by(
+                      city.columns.id.asc())
     rows = engine.execute(query).fetchall()
 
     for row in rows:
