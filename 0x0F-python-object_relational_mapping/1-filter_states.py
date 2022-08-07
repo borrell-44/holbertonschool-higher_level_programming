@@ -2,10 +2,10 @@
 """Write script that lists all states with a
 name starting with N (upper N) from the database hbtn_0e_0_usa"""
 
-if __name__ == "__main__":
-    from sys import argv
-    import MySQLdb
+from sys import argv
+import MySQLdb
 
+if __name__ == "__main__":
     db = MySQLdb.connect(host='localhost', user=argv[1],
                          password=argv[2], database=argv[3])
     c = db.cursor()
@@ -16,7 +16,5 @@ if __name__ == "__main__":
 
     rows = c.fetchall()
     for row in rows:
-        print(row)
-
-    c.close()
-    db.close()
+        if row[1][0] == 'N':
+            print(row)

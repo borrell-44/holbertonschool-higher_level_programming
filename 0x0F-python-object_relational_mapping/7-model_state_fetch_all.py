@@ -1,12 +1,14 @@
 #!/usr/bin/python3
-"""Write a script that lists all cities from the
-database hbtn_0e_4_usa"""
 
-from sys import argv
-import sys
-import MySQLdb
+"""Write a script that lists all State objects
+from the database hbtn_0e_6_usa"""
+
+
 
 if __name__ == "__main__":
+    from sys import argv
+    import sys
+    import MySQLdb
     db = MySQLdb.connect(user=argv[1], passwd=argv[2], db=argv[3], port=3306)
     c = db.cursor()
 
@@ -22,3 +24,6 @@ if __name__ == "__main__":
         if i != len(rows) - 1:
             print(",", end=" ")
     print()
+
+    c.close()
+    db.close()
