@@ -14,6 +14,7 @@ if __name__ == "__main__":
     db.MetaData.reflect(meta)
     states = meta.tables["states"]
 
+    db.insert(states).values(name="Louisiana")
     query = db.select([db.func.max(states.columns.id)])
     result = engine.execute(query).fetchall()
 
