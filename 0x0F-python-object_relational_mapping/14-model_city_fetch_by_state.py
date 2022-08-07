@@ -20,4 +20,4 @@ if __name__ == "__main__":
     rows = engine.execute(query).fetchall()
 
     for row in rows:
-        print(row)
+        print("{}: ({}) {}".format(row[0], row[1], row[2]))
