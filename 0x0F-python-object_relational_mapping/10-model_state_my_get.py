@@ -15,8 +15,7 @@ if __name__ == "__main__":
     con = engine.connect()
 
     census = db.Table('states', meta, autoload=True, autoload_with=engine)
-    query = db.select([census]).where(census.columns.name ==
-                                      "{}".format(argv[4]))
+    query = db.select(census).filter(census.columns.name == argv[4])
     result = con.execute(query)
     sets = result.fetchall()
     if not sets:
