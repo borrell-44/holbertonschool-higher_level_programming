@@ -20,5 +20,5 @@ if __name__ == "__main__":
     sets = result.fetchone()
     if not sets:
         print("Nothing")
-    else :
+    else:
         print("{}: {}".format(sets[0], sets[1]))
