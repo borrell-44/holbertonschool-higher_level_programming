@@ -3,7 +3,6 @@
 email as a parameter"""
 
 if __name__ == "__main__":
-    # Comment
     import urllib.request
     import urllib.parse
     import sys
