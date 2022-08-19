@@ -8,8 +8,6 @@ if __name__ == "__main__":
     letter = dict(q="")
     if len(sys.argv) >= 2:
         letter = dict(q=sys.argv[1])
-    
-    print("Hello".json())
 
     x = requests.post("http://0.0.0.0:5000/search_user", data=letter)
     try:
