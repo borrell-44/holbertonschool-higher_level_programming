@@ -12,9 +12,9 @@ if __name__ == "__main__":
     x = requests.post("http://0.0.0.0:5000/search_user", data=letter)
     try:
         response = x.json()
+        if not response:
+            print("No result")
+        else:
+            print("[{}] {}".format(response.get('id'), response.get('name')))
     except:
         print("Not a valid JSON")
-    if not response:
-        print("No result")
-    else:
-        print("[{}] {}".format(response.get('id'), response.get('name')))
