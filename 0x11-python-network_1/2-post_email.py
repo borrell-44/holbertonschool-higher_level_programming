@@ -6,7 +6,10 @@ if __name__ == "__main__":
     import urllib.parse
     import sys
 
-    data = urllib.parse.urlencode({"email": "hr@holbertonschool.com"})
-    with urllib.request.urlopen(sys.argv[1], data=data) as response:
-        body = response.read().decode('utf-8')
+    d = dict(email= sys.argv[2])
+    f = urllib.parse.urlencode(d)
+    f = f.encode('utf-8')
+    req = urllib.request.Request(sys.argv[1], f)
+    with urllib.request.urlopen(req) as response:
+        body = response.read()
         print(body)
