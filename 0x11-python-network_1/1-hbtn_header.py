@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# Sends an request for the given URL
+"""Sends an request for the given URL"""
 
 if __name__ == "__main__":
     # Comment

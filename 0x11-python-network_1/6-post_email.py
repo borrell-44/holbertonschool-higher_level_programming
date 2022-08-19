@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-# Fetches a URL with pythons requests library
+"""Fetches a URL with pythons requests
+library"""
 
 if __name__ == "__main__":
     import requests
