@@ -6,7 +6,7 @@ if __name__ == "__main__":
     import sys
 
     letter = dict(q="")
-    if len(sys.argv) < 1:
+    if len(sys.argv) >= 2:
         letter = dict(q=sys.argv[1])
 
     x = requests.post("http://0.0.0.0:5000/search_user", data=letter)
