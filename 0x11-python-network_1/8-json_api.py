@@ -12,7 +12,7 @@ if __name__ == "__main__":
     x = requests.post("http://0.0.0.0:5000/search_user", data=letter)
     try:
         response = x.json()
-    except AttributeError:
+    except:
         print("Not a valid JSON")
     if not response:
         print("No result")
