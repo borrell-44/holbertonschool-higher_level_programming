@@ -7,4 +7,6 @@ if __name__ == "__main__":
     import sys
 
     x = requests.get(sys.argv[1])
-    print(x.__dict__.get("headers")["X-Request-Id"])
+    list = x.__dict__.get("headers")
+    if "X-Request-Id" in list:
+        print(list.get("X-Request-Id"))
