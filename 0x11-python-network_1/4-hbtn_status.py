@@ -6,5 +6,5 @@ if __name__ == "__main__":
 
     x = requests.get('https://intranet.hbtn.io/status')
     print("Body response:")
-    print(f"\t- type: {type(x.text)}")
-    print(f"\t- content: {x.text}")
+    print("\t- type: {}".format(type(x.text)))
+    print("\t- content: {}".format(x.text))
