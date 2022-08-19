@@ -2,6 +2,7 @@
 # Sends a POST request to the given URL with the email as a parameter
 
 if __name__ == "__main__":
+    #Comment
     import urllib.request
     import urllib.parse
     import sys

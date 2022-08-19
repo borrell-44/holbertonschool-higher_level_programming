@@ -2,6 +2,7 @@
 # Sends an request for the given URL
 
 if __name__ == "__main__":
+    #Comment
     import urllib.request
     import sys
 
