@@ -7,10 +7,10 @@ const data = {};
 axios.get(path).then(resp => {
   const values = resp.data;
   for (let i = 0; i < values.length; i++) {
-    if ((values[i].userId in data) === false) {
-      data[values[i].userId] = 0;
-    }
     if (values[i].completed === true) {
+      if ((values[i].userId in data) === false) {
+        data[values[i].userId] = 0;
+      }
       data[values[i].userId] += 1;
     }
   }
